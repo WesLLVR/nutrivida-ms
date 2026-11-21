@@ -9,6 +9,7 @@ import java.util.Map;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -16,9 +17,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Component
 public class JwtUtil {
 
-    private final String secreto = "NutriVidaClaveSecretaParaFirmarTokens2026";
+    @Value("${jwt.secreto}")
+    private String secreto;
 
-    private final long minutos = 60;
+    @Value("${jwt.minutos}")
+    private long minutos;
 
     private final ObjectMapper mapper = new ObjectMapper();
 
