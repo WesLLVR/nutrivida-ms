@@ -1,11 +1,11 @@
 server:
-  port: 8081
+  port: 8082
 
 spring:
   application:
-    name: usuarioMS
+    name: catalogoMS
   datasource:
-    url: jdbc:mysql://localhost:3306/usuarios_db?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/catalogo_db?createDatabaseIfNotExist=true
     username: root
     password: ""
   jpa:
