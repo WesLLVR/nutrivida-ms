@@ -14,10 +14,10 @@
     </parent>
 
     <groupId>cl.duoc</groupId>
-    <artifactId>catalogoMS</artifactId>
+    <artifactId>usuarioMS</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>catalogoMS</name>
-    <description>Servicios, tipos de servicio y nutricionistas de la clínica</description>
+    <name>usuarioMS</name>
+    <description>Registro, inicio de sesión con JWT, roles y administración de usuarios</description>
 
     <properties>
         <java.version>17</java.version>
@@ -36,6 +36,10 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
         </dependency>
         <dependency>
             <groupId>com.mysql</groupId>
