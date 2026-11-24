@@ -48,10 +48,10 @@ class FichaServiceTest {
                 .thenReturn(new NutricionistaDTO(1, "Carolina Fuentes", "Obesidad", "carolina.fuentes@nutrivida.cl"));
         when(fichaRepository.save(any(Ficha.class))).thenAnswer(i -> i.getArgument(0));
 
-        Ficha ficha = new Ficha(null, 2, null, LocalDate.now(), 80.0, 1.60, 90.0, null, "Control", "Plan");
+        Ficha ficha = new Ficha(null, 2, null, LocalDate.now(), 70.0, 1.60, 90.0, null, "Control", "Plan");
         Ficha resultado = fichaService.crear(ficha, "carolina.fuentes@nutrivida.cl");
 
-        assertEquals(31.3, resultado.getImc());
+        assertEquals(27.3, resultado.getImc());
         assertEquals(1, resultado.getNutricionistaId());
     }
 
