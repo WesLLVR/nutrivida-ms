@@ -66,7 +66,8 @@ public class VentaService {
         venta.setTotal(total);
         venta.setNeto(neto);
         venta.setIva(total - neto);
-        venta.setNumero((int) ventaRepository.count() + 1001);
+        int ultimo = ventaRepository.findTopByOrderByNumeroDesc().map(Venta::getNumero).orElse(1000);
+        venta.setNumero(ultimo + 1);
 
         return ventaRepository.save(venta);
     }
